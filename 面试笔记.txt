@@ -1,0 +1,15 @@
+object类是所有类的父类，所以是可以被继承的，object类的tostring方法是可以被重写的。但是string类是被final修饰的，被final修饰的类是不可以被继承的，所以string类就不存在与任何类有继承关系，
+也就是说所有的方法都没办法被重写。
+继承有什么优缺点？优点：子类可以自动继承父类的对象；在创建子类的时候不需要再创建父类的对象。缺点：破坏封装，子类与父类的耦合性过高，子类过度依赖父类的实现，子类不能独立。
+支持扩展，却是以增强结构的复杂度为代价。不能动态继承，在运行时，子类不能随意选择不同的父类。子类不能更改父类的接口。
+接口的优缺点？类与接口的关系是实现关系，类可以实现很多接口，但类与类之间只能进行单继承，打破了继承的局限性。对外提供规则，降低了程序的耦合性。
+抽象类与接口的区别？共同点：都是没有具体实现的方法，也不能实例化（没有对象）区别：与类的关系？抽象类与类的关系是继承关系，一个类只能继承一个类，而类可以实现多个接口。
+与变量的关系？抽象类有成员变量，也可以有常量；接口只能有常量，默认修饰符是 public static final。与构造方法的关系？抽象类有构造方法，为子类提供；接口没有构造函数。
+与方法的关系？抽象类可以有抽象方法，也可以有非抽象方法；接口只有抽象方法，默认修饰符是public abstract。
+redis的基本数据类型？1、string（字符串） 2、hash（字典）3、list（列表）4、set（集合）5、zset（sorted set）有序集合
+spring和springMVC的区别？spring是ioc和aop的容器框架，springmvc是基于spring功能之上的web框架；所以使用springMVC必须依赖于spring；
+spring是管理bean的容器，也就是管理许多项目的容器。springMVC只是其中一个开源项目。
+final、finally、finalize的区别？final是修饰符，可以用来修饰类，方法、变量；final修饰类时不可以被继承；final修饰的方法不可以被重写；final修饰的变量不可以被改变。
+finally是用来异常处理的，提供finally代码块进行处理工作的。finalize是Object类的方法名，垃圾收集是发现该对象不再引用时，垃圾收集器会在该对象上调用该对象。是垃圾收集器在删除对象之前对该对象调用的。
+检查异常和运行时异常？检查异常（非运行时异常）编译器强制要求进行处理的异常，不处理将无法进行编译。有FileNotException，SQLException,ClassNotFoundException,IOException,ParseException;
+运行时异常：编译器并不强制要求处理的异常，可以是在运行时出现异常再进行处理，比如ClassCastException，ArrayIndexOutOfBoundsException；NullPointException；ArithMeticException；NumberFormatException；
